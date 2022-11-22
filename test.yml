@@ -1,6 +1,11 @@
-- name: ensure cowsay is installed
-  yum:
-    name: cowsay
-    state: present
-    update_cache: true
-  become: true
+---
+  - name: "Playing with Ansible and Git"
+    hosts: localhost
+    connection: local 
+    tasks:
+    - name: ensure cowsay is installed
+      yum:
+        name: cowsay
+        state: present
+        update_cache: true
+      become: true
