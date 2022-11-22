@@ -1,0 +1,6 @@
+- name: ensure cowsay is installed
+  yum:
+    name: cowsay
+    state: present
+    update_cache: true
+  become: true
