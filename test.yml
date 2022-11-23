@@ -9,3 +9,6 @@
         state: present
         update_cache: true
       become: true
+  - name: "Ansible | List all known variables and facts"
+    debug:
+      var: hostvars[inventory_hostname]
